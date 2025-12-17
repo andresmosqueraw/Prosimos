@@ -1130,7 +1130,7 @@ class SimBPMEnv:
         elapsed = current_sim_time - c_event.enabled_at
 
         if duration <= elapsed:
-            # The event’s timer expired in the past.
+            # The event's timer expired in the past.
             completed_at = c_event.enabled_at + duration
             completed_datetime = c_event.enabled_datetime + timedelta(seconds=duration)
             # print(f"Event {c_event.task_id} from process state (either enabled event or coming after gateway) expired in the past and completed at {completed_datetime}.")
